@@ -1,0 +1,25 @@
+#mContainer {
+	height: 30px;
+	width: 550px;
+	position:relative;
+	margin-top:5px;
+	letter-spacing:5px;
+	word-spacing:normal;
+	font:bold 24pt ºÚÌå,"century gothic",arial,verdana,helvetica;
+	border:1px dashed red;
+	overflow:hidden;
+	padding:10px;
+	color:red;
+	cursor:default;
+	text-align:center;
+	vertical-align:middle;
+}
+
+#mContainer div {
+	display:none;
+}
+
+#nContainer {
+	display:block !important;
+	position:relative;
+}

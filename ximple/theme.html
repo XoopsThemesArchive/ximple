@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<{$xoops_url}>/backend.php" />
+<link rel="stylesheet" type="text/css" href="<{$xoops_imageurl}>banner/banner.css" media="all" />
+<script lanuage="javascript" type="text/javascript" src="<{$xoops_imageurl}>banner/banner.js"></script>
+<script lanuage="javascript" type="text/javascript" src="<{$xoops_imageurl}>banner/banner.js"></script>
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+	<div id="banner">
+		<div id="logo"><a href="<{$xoops_url}>" title="<{$xoops_slogan}>"><{$xoops_sitename}></a></div>
+		<div style="margin-left:50px" id="mContainer">
+			<div>X O O P S</div>
+			<div>Powered By You</div>
+			<div>Happy Chinese New Year</div>
+		</div>
+	</div>
+
+	<{if $xoops_lblocks}>
+
+	<div id="leftcontent">
+
+		<!-- Start left blocks loop -->
+        <{foreach item=block from=$xoops_lblocks}>
+          <{include file="ximple/theme_blockleft.html"}>
+        <{/foreach}>
+        <!-- End left blocks loop -->
+
+	</div>
+	 <{/if}>
+
+
+	<{if $xoops_showrblock}>
+	<div id="centercontent">
+	<{else}>
+	<div id="centercontent_2">
+	<{/if}>
+		<!-- Display center blocks if any -->
+        <{if $xoops_showcblock == 1}>
+
+		  <div id="centerCcolumn">
+            <!-- Start center-center blocks loop -->
+            <{foreach item=block from=$xoops_ccblocks}>
+              <{include file="ximple/theme_blockcenter_c.html"}>
+            <{/foreach}>
+            <!-- End center-center blocks loop -->
+		  </div>
+
+  		  <div id="centerLcolumn">
+            <!-- Start center-left blocks loop -->
+              <{foreach item=block from=$xoops_clblocks}>
+                <{include file="ximple/theme_blockcenter_l.html"}>
+              <{/foreach}>
+            <!-- End center-left blocks loop -->
+		  </div>
+
+		  <div id="centerRcolumn">
+            <!-- Start center-right blocks loop -->
+              <{foreach item=block from=$xoops_crblocks}>
+                <{include file="ximple/theme_blockcenter_r.html"}>
+              <{/foreach}>
+            <!-- End center-right blocks loop -->
+		  </div>
+        <!-- End display center blocks -->
+		<{/if}>
+        <div id="content">
+          <{$xoops_contents}>
+        </div>
+	</div>
+
+	<{if $xoops_showrblock}>
+
+	<div id="rightcontent">
+
+        <!-- Start right blocks loop -->
+        <{foreach item=block from=$xoops_rblocks}>
+          <{include file="ximple/theme_blockright.html"}>
+        <{/foreach}>
+        <!-- End right blocks loop -->
+
+	</div>
+	 <{/if}>
+
+<br clear="both"/>
+<div id="footer"><{$xoops_footer}> | Theme: <a href="http://xoops.org.cn">XOOPS CHINA</a></div>
+</body>
+</html>
